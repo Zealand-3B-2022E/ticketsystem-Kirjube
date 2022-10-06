@@ -9,16 +9,26 @@ namespace TicketSystemClassLibrary
     /// <summary>
     /// En klasse med navnet Car, som har propetierne: LicensePlate, Date og metoderne: VehicleType og Price.
     /// </summary>
-    public class Car
+    public class Car:Vehicle
     {
-        public string LicensePlate { get; set; }
+
+        public Car():base()
+        {
+
+        }
+        public Car(string licensePlate)
+           : base(licensePlate)
+        {
+        }
+
+
         public DateTime Date { get; set; }
 
         /// <summary>
         /// Metode som ikke bruger nogle input men returnere en double værdi på 240.
         /// </summary>
         /// <returns>Double price = 240</returns>
-        public double Price()
+        public override double Price()
         {
             double price = 240;
             return price;
@@ -27,7 +37,7 @@ namespace TicketSystemClassLibrary
         /// Metode som ikke bruger nogle input og returnere en string "Car"
         /// </summary>
         /// <returns>string vehicleType = "Car"</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             string vehicleType = "Car";
 
