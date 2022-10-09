@@ -16,8 +16,8 @@ namespace TicketSystemClassLibrary
         {
 
         }
-        public Car(string licensePlate, DateTime date)
-           : base(licensePlate, date)
+        public Car(string licensePlate, DateTime date, bool broBizz)
+           : base(licensePlate, date, broBizz)
         {
         }
 

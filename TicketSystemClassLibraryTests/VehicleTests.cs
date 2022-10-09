@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StoreBaeltTicketLibrary;
+using OresundTicketLibrary;
+using System.Runtime.ConstrainedExecution;
 
 namespace TicketSystemClassLibrary.Tests
 {
@@ -66,22 +68,13 @@ namespace TicketSystemClassLibrary.Tests
         public void MCExpeptionifLicensePlateisOver7()
         {
             
-            MC mc = new MC("12345628", DateTime.Now);
+            MC mc = new MC("12345628", DateTime.Now, false);
 
             Assert.Fail();
            
         }
 
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void CarExpeptionifLicensePlateisOver7()
-        {
-
-            MC mc = new MC("12345628", DateTime.Now);
-
-            Assert.Fail();
-
-        }
+       
 
         [TestMethod()]
         public void MCDiscount5ProcentTest()
@@ -180,6 +173,89 @@ namespace TicketSystemClassLibrary.Tests
         Assert.AreEqual(expectedValue, actuallyValue, 0.1);
 
     }
+        /*---------------------------------------------------------------------------*/
 
-}
+        [TestMethod()]
+        public void OresundStandardPrisBilTest()
+        {
+            ///Arrange
+            OresundCar car = new OresundCar();
+            double expectedValue = 410;
+            //act
+            double actuallyValue = car.Price();
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+
+        [TestMethod()]
+        public void OresundStandardPrisMCTest()
+        {
+            ///Arrange
+            OresundMC mc = new OresundMC();
+            double expectedValue = 210;
+            //act
+            double actuallyValue = mc.Price();
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+        [TestMethod()]
+        public void OresundfalseBrobizzPrisBilTest()
+        {
+            ///Arrange
+            OresundCar car = new OresundCar();
+            double expectedValue = 410;
+            bool brobizz = false;
+            double price = car.Price();
+            //act
+            double actuallyValue = car.BroBizzDiscount(price,brobizz);
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+        [TestMethod()]
+        public void OresundtrueBrobizzPrisBilTest()
+        {
+            ///Arrange
+            OresundCar car = new OresundCar();
+            double expectedValue = 161;
+            bool brobizz = true;
+            double price = car.Price();
+            //act
+            double actuallyValue = car.BroBizzDiscount(price, brobizz);
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+        [TestMethod()]
+        public void OresundfalseBrobizzPrisMCTest()
+        {
+            ///Arrange
+            OresundMC mc = new OresundMC();
+            double expectedValue = 210;
+            bool brobizz = false;
+            double price = mc.Price();
+            //act
+            double actuallyValue = mc.BroBizzDiscount(price, brobizz);
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+        [TestMethod()]
+        public void OresundtrueBrobizzPrisMCTest()
+        {
+            ///Arrange
+            OresundMC mc = new OresundMC();
+            double expectedValue = 73;
+            bool brobizz = true;
+            double price = mc.Price();
+            //act
+            double actuallyValue = mc.BroBizzDiscount(price, brobizz);
+            //Assert
+            Assert.AreEqual(expectedValue, actuallyValue, 0.1);
+
+        }
+
+    }
 }

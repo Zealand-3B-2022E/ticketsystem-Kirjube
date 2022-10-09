@@ -13,13 +13,15 @@ namespace TicketSystemClassLibrary
     {
         public string LicensePlate { get; set; }
         public DateTime Date { get; set; }
+
+        public bool broBizz { get; set; }
         /// <summary>
         /// Constructor. For the Default Discount is set to "empty"
         /// </summary>
         /// <param name="licensePlate"></param>
         /// <exception cref="ArgumentException"></exception>
 
-        public Vehicle(string licensePlate, DateTime date)
+        public Vehicle(string licensePlate, DateTime date, bool broBizz)
         {
             if (licensePlate.Length > 7)
             {
@@ -28,8 +30,9 @@ namespace TicketSystemClassLibrary
             this.LicensePlate = licensePlate;
 
             Date = date;
+            broBizz = broBizz;
         }
-        public Vehicle():this("Empty",DateTime.Now)
+        public Vehicle():this("Empty",DateTime.Now, false)
         {
 
         }

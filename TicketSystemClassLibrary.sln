@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSystemClassLibraryTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreBaeltTicketLibrary", "StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj", "{FAFAA91E-FAA1-42D7-837E-787AA3DD86E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundTicketLibrary", "OresundTicketLibrary\OresundTicketLibrary.csproj", "{A58C72C4-72C8-492E-995A-E886984CF69E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OresundTicketLibrary", "OresundTicketLibrary\OresundTicketLibrary.csproj", "{A58C72C4-72C8-492E-995A-E886984CF69E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreBaeltTicketREST", "StoreBaeltTicketREST\StoreBaeltTicketREST.csproj", "{45AC5E40-A900-4034-98A3-E53550B3A7F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A58C72C4-72C8-492E-995A-E886984CF69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A58C72C4-72C8-492E-995A-E886984CF69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A58C72C4-72C8-492E-995A-E886984CF69E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AC5E40-A900-4034-98A3-E53550B3A7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AC5E40-A900-4034-98A3-E53550B3A7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AC5E40-A900-4034-98A3-E53550B3A7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AC5E40-A900-4034-98A3-E53550B3A7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

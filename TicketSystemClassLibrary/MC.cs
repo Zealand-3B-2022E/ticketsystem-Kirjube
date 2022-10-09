@@ -18,8 +18,8 @@ namespace TicketSystemClassLibrary
         {
 
         }
-        public MC(string licensePlate, DateTime date)
-           : base(licensePlate, date)
+        public MC(string licensePlate, DateTime date, bool broBizz)
+           : base(licensePlate, date, broBizz)
         {
         }
         /// <summary>

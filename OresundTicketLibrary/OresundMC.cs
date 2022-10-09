@@ -20,26 +20,40 @@ namespace OresundTicketLibrary
         /// <summary>
         /// Metode som ikke bruger nogle input men returnere en double værdi på 125.
         /// </summary>
-        /// <returns>Double price = 125</returns>
+        /// <returns>Double price = 210</returns>
         public override double Price()
         {
             double price = 210;
             return price;
         }
         /// <summary>
-        /// Metode som ikke bruger nogle input og returnere en string "MC"
+        /// Metode som ikke bruger nogle input og returnere en string "OresundMC"
         /// </summary>
-        /// <returns>string vehicleType = "MC"</returns>
+        /// <returns>string vehicleType = "OresundMC"</returns>
         public override string VehicleType()
         {
             string vehicleType = "OresundMC";
 
             return vehicleType;
         }
-
+        /// <summary>
+        /// Metode som tager double pris og bool brobizz og returnerer en ny pris baseret på om kunde har brobizz eller ej. 
+        /// </summary>
+        /// <param name="price"></param>
+        /// <param name="BroBizz"></param>
+        /// <returns>double = 73 hvis brobizz er true, 210 hvis brobizz er false. </returns>
         public override double BroBizzDiscount(double price, bool BroBizz)
         {
-            return 73;
+            if(BroBizz == true)
+            {
+                return 73;
+
+            }
+            else
+            {
+                return price;
+            }
+            
         }
     }
 }
