@@ -28,5 +28,28 @@ namespace StoreBaeltTicketREST.Controllers
                 return Ok(cars);
             }
         }
+        [HttpPost]
+        public CarsWeekendDiscount Post([FromBody] CarsWeekendDiscount car)
+        {
+            return mgr.Create(car);
+        }
+
+        [HttpGet]
+        [Route("{licensePlate}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetByLicensePlate(string licensePlate)
+        {
+            CarsWeekendDiscount foundCar = mgr.GetByLicensePlate(licensePlate);
+            if (foundCar == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(foundCar);
+            }
+
+        }
     }
 }

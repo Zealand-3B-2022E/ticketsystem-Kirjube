@@ -6,5 +6,8 @@ namespace StoreBaeltTicketREST.Managers
     {
         List<CarsWeekendDiscount> Get();
         CarsWeekendDiscount Create(CarsWeekendDiscount car);
+        CarsWeekendDiscount GetByLicensePlate(string licensePlate);
+        
+
     }
 }

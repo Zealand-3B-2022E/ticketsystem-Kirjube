@@ -18,5 +18,10 @@ namespace StoreBaeltTicketREST.Managers
         {
             return _cars;
         }
+
+        public CarsWeekendDiscount GetByLicensePlate(string licensePlate)
+        {
+            return _cars.Find(b => b.LicensePlate == licensePlate);
+        }
     }
 }
