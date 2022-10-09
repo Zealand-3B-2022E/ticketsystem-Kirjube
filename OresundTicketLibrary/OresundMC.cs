@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystemClassLibrary;
 
-namespace TicketSystemClassLibrary
-{/// <summary>
-/// Klasse med navn MC. Indeholder properties: string LicensePlate og DateTime Date. Samt metoderne Price, og Vehicle Type.
-/// Arver fra klassen Vehicle.
-/// </summary>
-    public class MC:Vehicle
+namespace OresundTicketLibrary
+{
+    public class OresundMC:MC
     {
-        
-        
-
-        public MC() : base()
+        public OresundMC() : base()
         {
 
         }
-        public MC(string licensePlate, DateTime date)
+        public OresundMC(string licensePlate, DateTime date)
            : base(licensePlate, date)
         {
         }
@@ -28,7 +23,7 @@ namespace TicketSystemClassLibrary
         /// <returns>Double price = 125</returns>
         public override double Price()
         {
-            double price = 125;
+            double price = 210;
             return price;
         }
         /// <summary>
@@ -37,10 +32,14 @@ namespace TicketSystemClassLibrary
         /// <returns>string vehicleType = "MC"</returns>
         public override string VehicleType()
         {
-            string vehicleType = "MC";
+            string vehicleType = "OresundMC";
 
             return vehicleType;
         }
 
+        public override double BroBizzDiscount(double price, bool BroBizz)
+        {
+            return 73;
+        }
     }
 }

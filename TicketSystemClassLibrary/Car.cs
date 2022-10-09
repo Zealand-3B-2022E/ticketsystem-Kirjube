@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TicketSystemClassLibrary
 {
     /// <summary>
-    /// En klasse med navnet Car, som har propetierne: LicensePlate, Date og metoderne: VehicleType og Price.
+    /// En klasse med navnet Car, som har propetierne: LicensePlate, Date og metoderne: VehicleType og Price.Klassen arver fra Vehicle.
     /// </summary>
     public class Car:Vehicle
     {
@@ -16,13 +16,13 @@ namespace TicketSystemClassLibrary
         {
 
         }
-        public Car(string licensePlate)
-           : base(licensePlate)
+        public Car(string licensePlate, DateTime date)
+           : base(licensePlate, date)
         {
         }
 
 
-        public DateTime Date { get; set; }
+
 
         /// <summary>
         /// Metode som ikke bruger nogle input men returnere en double værdi på 240.
