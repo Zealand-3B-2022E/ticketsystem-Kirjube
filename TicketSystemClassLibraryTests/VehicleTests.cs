@@ -114,10 +114,11 @@ namespace TicketSystemClassLibrary.Tests
             ///Arrange
              CarsWeekendDiscount car = new CarsWeekendDiscount();
             double price = car.Price();
-            bool brobizz = true;
+            car.broBizz = true;
+            DateTime date = new DateTime(2022, 10, 9);
             double expectedValue = 182.4;
             //act
-            double actuallyValue = car.weekendDiscount(brobizz,DateTime.Today);
+            double actuallyValue = car.weekendDiscount(car.broBizz,date);
             //Assert
             Assert.AreEqual(expectedValue, actuallyValue, 0.1);
 
@@ -133,12 +134,13 @@ namespace TicketSystemClassLibrary.Tests
         ///Arrange
             
             CarsWeekendDiscount car = new CarsWeekendDiscount();
-            double price = car.Price();
-            bool brobizz = false;
+            double price = car.Price();  
             double expectedValue = 192;
-           
+            car.broBizz = false;
+            DateTime date = new DateTime(2022, 10, 9);
+
             //act
-            double actuallyValue = car.weekendDiscount(brobizz, DateTime.Now);
+            double actuallyValue = car.weekendDiscount(car.broBizz, date);
             //Assert
             Assert.AreEqual(expectedValue, actuallyValue, 0.1);
 

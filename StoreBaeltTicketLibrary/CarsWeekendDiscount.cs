@@ -13,8 +13,8 @@ namespace StoreBaeltTicketLibrary
         {
 
         }
-        public CarsWeekendDiscount(string licensePlate, DateTime date)
-           : base(licensePlate, date)
+        public CarsWeekendDiscount(string licensePlate, DateTime date, bool broBizz)
+           : base(licensePlate, date, broBizz)
         {
         }
 

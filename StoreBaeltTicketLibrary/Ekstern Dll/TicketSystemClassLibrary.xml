@@ -44,7 +44,7 @@
             Abstract Class used for Vehicles. 
             </summary>
         </member>
-        <member name="M:TicketSystemClassLibrary.Vehicle.#ctor(System.String,System.DateTime)">
+        <member name="M:TicketSystemClassLibrary.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
             <summary>
             Constructor. For the Default Discount is set to "empty"
             </summary>

@@ -13,8 +13,8 @@ namespace OresundTicketLibrary
         {
 
         }
-        public OresundMC(string licensePlate, DateTime date)
-           : base(licensePlate, date)
+        public OresundMC(string licensePlate, DateTime date, bool brobizz)
+           : base(licensePlate, date, brobizz)
         {
         }
         /// <summary>
